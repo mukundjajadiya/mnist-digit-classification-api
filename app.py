@@ -25,7 +25,7 @@ except Exception as e:
 @app.route("/", methods=["GET",  "POST"])
 def index():
     if request.method == "GET":
-        return jsonify({'GET_Reqest': "http://url/", "POST_Reqest": "http://url"})
+        return jsonify({'GET_Reqest': "https://digit-classification-api.herokuapp.com/", "POST_Reqest": "https://digit-classification-api.herokuapp.com/"})
 
     if request.method == "POST":
         # check if the post request has the file part
