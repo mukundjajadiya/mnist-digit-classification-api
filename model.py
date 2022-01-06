@@ -1,7 +1,7 @@
 print("\nLoading Library..")
 import os
-from numpy import expand_dims, argmax
-from keras.preprocessing.image import img_to_array
+import cv2
+from numpy import expand_dims, argmax, asarray
 from keras.models import load_model
 from PIL import Image
 from cv2 import cvtColor, resize, COLOR_BGR2GRAY, INTER_AREA
@@ -13,9 +13,9 @@ class MNISTModel():
 
     def img_preprocess(self, image):
         try:
-            img =  Image.open(image)
-            img = img_to_array(img)
             dim = (28,28)
+            img =  Image.open(image)
+            img = asarray(img)
             img = cvtColor(img, COLOR_BGR2GRAY)
             img = resize(img, dim, interpolation=INTER_AREA)
             img = expand_dims(img, axis=2)

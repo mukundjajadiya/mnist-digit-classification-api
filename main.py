@@ -18,6 +18,7 @@ def allowed_file(filename):
 try:
     model_path = os.path.join("model", "mnist_cnn_model.h5")
     mnist_model = MNISTModel(model_path)
+    print(mnist_model)
 except Exception as e:
     print(f"[ERROR] {e}")
 
