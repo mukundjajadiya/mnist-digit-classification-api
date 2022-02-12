@@ -2,7 +2,7 @@
 
 # MNIST Digit classification api
 
-url: https://digit-classification-api.herokuapp.com/
+Project URL: https://digit-classification-api.herokuapp.com/
 
 ### Demo
 
